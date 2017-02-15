@@ -1,0 +1,22 @@
+<template name="subredditsIncluded">
+  <div class="container">
+  {{#if this}}
+    <div class="row justify-content-left">
+        <h3>You've searched: </h3>
+    </div>
+    <div class="row">
+        <ul class="fa-ul">
+          {{#each this}}
+            <li class="js-remove-search-item col-auto" style="display:inline;padding-right:8px">
+              <button type="button" class="btn btn-info" aria-label="Left Align">
+                {{this}} 
+                <i class="fa fa-window-close fa-lg"></i>
+              </button>
+          </li>
+          {{/each}}
+        </ul>
+      
+    </div>
+  {{/if}}
+    </div>
+</template>

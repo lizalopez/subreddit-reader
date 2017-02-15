@@ -1,0 +1,46 @@
+<template name="resultsBoard">
+  <div class="container" id="results-container">
+    {{#if this}}
+    <div class="row">
+      <h3 class="page-header">Results:</h3>
+        </div>
+    <div class="list-group">
+      <div class="col-10">
+      <ul>
+      {{#each post in this}}
+      <li class="row">
+        <div class="col-8">
+          <div class="row">
+
+            <div class="col">
+                <b><a href={{post.url}} target="_blank">
+                  {{post.title}}
+                </a>
+                </b>
+                Posted by <b>{{post.author}}</b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                Created <b>{{formatDate(post.created)}}</b>
+            </div>
+            <div class="col comments">
+                <i class="fa fa-comments-o fa-lg" aria-hidden="true"></i> {{post.numComments}}
+            </div>
+            <div class="col upvotes">
+             <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i> {{post.score}}
+            </div>
+          </div>
+        </div>
+          <div class="col-2 align-self-right subreddit">
+              #{{post.subreddit}}
+          </div>
+      </li>
+      <hr>
+      {{/each}}
+      </ul>
+      </div>
+    </div>
+    {{/if}}
+    </div>
+</template>

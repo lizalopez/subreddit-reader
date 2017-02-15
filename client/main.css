@@ -1,1 +1,16 @@
 /* CSS declarations go here */
+.list-group {
+    margin-bottom: 50px;
+}
+
+a.back-to-top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+}
