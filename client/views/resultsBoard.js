@@ -3,7 +3,6 @@ import { Template } from 'meteor/templating';
 
 Template.resultsBoard.helpers({
   formatDate(unixStamp) {
-    // return Chronos.moment.unix(unixStamp).fromNow();
     return Chronos.moment(unixStamp*1000).fromNow();
   },
 });

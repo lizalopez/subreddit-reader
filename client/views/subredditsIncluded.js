@@ -7,11 +7,10 @@ Template.subredditsIncluded.events({
   'click .js-remove-search-item button'(event, instance) {
     event.preventDefault();
 
-    const topicToRemove = this.valueOf();//.closest( "p" );
+    var topicToRemove = this.valueOf();;
 
-   // let topicList = Template.instance().searchedTopics.get();
-   let topicList = Session.get("searchedTopics");
-   topicList.splice(topicList.indexOf(topicToRemove), 1);
-   Session.set("searchedTopics", topicList);
+    var topicList = Session.get("searchedTopics");
+    topicList.splice(topicList.indexOf(topicToRemove), 1);
+    Session.set("searchedTopics", topicList);
   },
 });
